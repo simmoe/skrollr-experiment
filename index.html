@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+
+<body>
+    <div id="counter">15</div>
+    <section class="slide slide1" grid-template-columns: 40vw 20vw 40vw;
+        data-0="grid-template-rows: 45vh 10vh 45vh; grid-template-columns: 40vw 20vw 40vw"
+        data-200="grid-template-rows: 0vh 100vh 0vh; grid-template-columns: 0vw 100vw 0vw">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </section>
+    <section class="slide slide2">
+        <div class="content" data-400="opacity:0" data-800="opacity:1">
+            <h2>The magic mountain</h2>
+            <p>An unassuming young man was travelling, in midsummer, from his native city of Hamburg to Davos - Platz in
+                the Canton of the Grisons, on a three weeks’ visit. </p>
+            <p>From Hamburg to Davos is a long journey — too long, indeed,for so brief a stay. It crosses all sorts of
+                country; goes up hill and down dale, descends from the plateau of Southern Germany to the shore of Lake
+                Constance, over its bounding waves and on across marshes once thought to be bottomless.</p>
+        </div>
+    </section>
+    <section class="slide slide3" data-1000="left:100vw" data-1400="left:0vw; background-size:100%"
+        data-2000="background-size:120%">
+
+        <div class="img" data-1400="background-size:100%" data-1600="background-size:400%">
+        </div>
+    </section>
+    <section class="slide slide4"
+    data-1600="right:100vw" 
+    data-1700="right:20vw;opacity:1"
+    data-2200="opacity:0">
+        <div class="content">
+            <h2>Hans Castorp</h2>
+            <p>An unassuming young man was travelling, in midsummer, from his native city of Hamburg to Davos - Platz in
+                the Canton of the Grisons, on a three weeks’ visit. </p>
+            <p>From Hamburg to Davos is a long journey — too long, indeed,for so brief a stay. It crosses all sorts of
+                country; goes up hill and down dale, descends from the plateau of Southern Germany to the shore of Lake
+                Constance, over its bounding waves and on across marshes once thought to be bottomless.</p>
+        </div>
+    </section>
+
+    <section class="slide slide5"
+        data-1900="left:-100vw" 
+        data-2000="left:0vw; background-size:100%"
+        data-4000="background-size:250%"
+        data-4200="opacity:1"
+        data-4400="opacity:0">
+    <div class="img1"
+            data-2000="background-position: 0% -40vh" 
+            data-2200="background-position: 0% -100vh">
+        </div>
+        <div class="img2"
+            data-2000="background-position: 0% 0vh" 
+            data-2200="background-position: 0% 50vh"
+            >
+
+        </div>
+    </section>
+    <section class="slide slide6"
+        data-2400="background-size: 0%" 
+        data-3200="background-size: 200%; opacity:1;"
+        data-4000="background-size: 400%; opacity:1;"        
+        >
+    </section>
+
+    <section class="slide slide7"
+        data-4000="opacity:0;"
+        data-4800="opacity:1;">
+
+        <div
+            data-4000="font-size:1em;"
+             data-5400="font-size:25em;">
+        <b>The end</b></div>
+    </section>
+    <script src="js/skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+
+        var scrollObject = {};
+        window.onscroll = getScrollPosition;
+
+        function getScrollPosition() {
+            scrollObject = {
+                x: window.pageXOffset,
+                y: window.pageYOffset
+            }
+            document.querySelector('#counter').innerHTML = scrollObject.y;
+        }
+    </script>
+</body>
+
+</html>

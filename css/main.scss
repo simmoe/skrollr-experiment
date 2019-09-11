@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#counter {
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    background-color: black;
+    opacity: .6;
+    z-index: 2;
+    color: white;
+    padding: 40px;
+    border-radius: 4px;
+
+}
+
+.slide {
+    height: 100vh;
+    width: 100vw;
+}
+
+.slide1 {
+    position: fixed;
+    background-image: url('../img/bcg_slide-1.jpg');
+    display: grid;
+    grid-template-columns: 40vw 20vw 40vw;
+    grid-template-rows: 45vh 10vh 45vh;
+    justify-content: space-between;
+    align-content: space-between;
+
+    span {
+        background-color: white;
+
+        &:nth-child(5) {
+            visibility: hidden;
+        }
+    }
+}
+
+.slide2 {
+    position: absolute;
+    top: 100vh;
+    display: grid;
+    grid-template-rows: 20vh;
+    grid-template-columns: 20vw;
+    justify-content: center;
+    align-content: center;
+    color: white;
+
+    h2 {
+        font-size: 3em;
+        padding-bottom: 10px;
+    }
+}
+
+.slide3 {
+    position: fixed;
+    left: 100vw;
+    top: 0;
+    background-image: url('../img/bcg_slide-2.jpg');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .img {
+        height: 100vh;
+        width: 100vw;
+        background-image: url('../img/hole.png');
+        background-size: 100%;
+        background-position: center;
+    }
+}
+
+.slide4 {
+    position: fixed;
+    top: 10vh;
+    right: 100vw;
+    display: grid;
+    grid-template-rows: 20vh;
+    grid-template-columns: 20vw;
+    justify-content: center;
+    align-content: center;
+    color: white;
+
+    h2 {
+        font-size: 3em;
+        padding-bottom: 10px;
+    }
+}
+
+.slide5 {
+    background-image: url('../img/valley.jpg');
+    background-size: 100%;
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    display: grid;
+    grid-template-columns: 100vw;
+
+    div {
+        background-repeat: no-repeat;
+    }
+
+    .img1 {
+        background-size: 100%;
+        background-position: bottom;
+        background-image: url('../img/mountain-down.png');
+    }
+
+    .img2 {
+        background-size: 100%;
+        background-position: top;
+        background-image: url('../img/mountain.png');
+    }
+}
+
+.slide6 {
+    background-image: url('../img/cloud.png');
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+}
+
+.slide7 {
+    position: fixed;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    div {
+        font-size:15em;
+        font-weight:400;
+        /* if we can clip, do it */
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* what will show through the text
+      ~ or ~
+     what will be the background of that element */
+        background-image:url('../img/valley.jpg');
+
+        /* fallback text color
+      ~ or ~
+     the actual color of text, so it better work on the background */
+        color: white;
+    }
+}
